@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Favicon incorporado no próprio HTML para não depender de outro arquivo -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23243f8f' stroke-width='10'/%3E%3Ccircle cx='50' cy='50' r='28' fill='none' stroke='%23243f8f' stroke-width='9'/%3E%3Ccircle cx='50' cy='36' r='11' fill='%23243f8f'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23243f8f' stroke-width='10'/%3E%3Ccircle cx='50' cy='50' r='28' fill='none' stroke='%23243f8f' stroke-width='9'/%3E%3Ccircle cx='50' cy='36' r='11' fill='%23243f8f'/%3E%3C/svg%3E">
+<title>Trilha de Inteligência Empresarial | Monitore Negócios</title>
+<meta name="description" content="Trilha de Inteligência Empresarial — dados, indicadores, análise e ferramentas para apoiar decisões mais estruturadas e orientadas ao negócio.">
+
+<style>
+:root{
+  --navy:#172E68; --navy2:#102554; --blue:#2785C4; --cyan:#22AFC0;
+  --yellow:#F5D21F; --ink:#17134B; --text:#4A4A4A; --light:#F6F8FB; --line:#DDE4EB;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6}
+a{text-decoration:none}
+.container{width:min(1120px,90%);margin:auto}
+
+/* CABEÇALHO FIXO */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:9999;
+  height:78px;background:rgba(8,25,52,.98);
+  border-bottom:1px solid rgba(255,255,255,.10);
+  box-shadow:0 3px 16px rgba(0,0,0,.16);
+}
+.header-inner{
+  height:100%;display:flex;align-items:center;justify-content:space-between;gap:28px;
+}
+.brand{display:block;flex:0 0 auto}
+.brand img{width:245px;max-height:58px;object-fit:contain;display:block;filter:brightness(0) saturate(100%) invert(100%)}
+.main-nav{display:flex;align-items:center;justify-content:flex-end;gap:28px}
+.main-nav a{color:#fff;font-size:13px;white-space:nowrap}
+.header-contact{
+  display:inline-flex!important;align-items:center;gap:8px;
+  border:1px solid var(--cyan);border-radius:28px;padding:10px 17px;
+  color:#fff!important;font-weight:700;
+}
+.header-contact span{font-size:16px;line-height:1}.whatsapp-icon{display:inline-flex;width:17px;height:17px;color:currentColor}.whatsapp-icon svg{width:100%;height:100%;fill:currentColor}
+
+/* HERO */
+.hero{
+  position:relative;overflow:hidden;color:#fff;
+  background:linear-gradient(90deg,rgba(8,15,29,.97),rgba(11,39,75,.88)),
+  url("https://www.monitorenegocios.com.br/capa%20blog%20monitore.jpg") center/cover;
+  padding:136px 0 58px;
+}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--yellow)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .82fr;gap:46px;align-items:center}
+.eyebrow,.label{
+  color:#40A7E4;text-transform:uppercase;letter-spacing:3px;
+  font-size:14px;font-weight:800;margin-bottom:18px;
+}
+.hero h1{font-size:clamp(42px,4.8vw,62px);line-height:1.04;margin:0 0 16px}
+.hero h1 span{color:var(--blue)}
+.lead{font-size:17px;line-height:1.5;max-width:650px;color:#F4F7FB;margin:0 0 22px}
+.buttons{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;border-radius:32px;padding:15px 28px;font-weight:800}
+.primary{background:#fff;color:#2456D6}
+.outline{border:1px solid #ffffff88;color:#fff}
+.hero-card{background:#0B3159;border:2px solid var(--cyan);border-radius:16px;padding:25px}
+.hero-card h2{font-size:23px;line-height:1.22;margin:9px 0 13px;color:#fff}
+.hero-card p{font-size:15px;line-height:1.52;margin:0}
+
+/* SEÇÕES */
+section{padding:58px 0}
+.two,.develop,.forwho{display:grid;grid-template-columns:1fr 1.25fr;gap:58px}
+.big,h2{color:var(--ink);font-size:clamp(30px,3.4vw,44px);line-height:1.14;margin:0}
+.copy{font-size:16px;line-height:1.58}
+.quote{margin-top:28px;padding:22px 25px;border-left:4px solid var(--blue);background:var(--light);color:var(--ink);font-size:20px;font-weight:700}
+.light{background:var(--light)}
+.center{text-align:center}
+.center h2{margin-bottom:15px}
+.sub{max-width:780px;margin:0 auto 34px;font-size:16px;line-height:1.55}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px}
+.box h3{color:var(--blue);font-size:19px;margin:0 0 8px}
+.box p{margin:0;font-size:15px;line-height:1.5}
+.axes{display:grid;gap:0}
+.axis{display:grid;grid-template-columns:46px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.axis:last-child{border:0}
+.num{color:var(--blue);font-weight:800}
+.axis h3{margin:0 0 4px;color:#063C58;font-size:19px}
+.axis p{margin:0;font-size:14px;line-height:1.5}
+.dark{background:var(--navy);color:#fff}
+.dark .label{color:#40A7E4}
+.dark h2{color:#fff}
+.modules{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.module{border:1px solid #ffffff66;border-radius:10px;padding:20px 17px;min-height:190px;background:#ffffff05}
+.module .num{color:#40A7E4;font-size:13px;letter-spacing:1px}
+.module h3{font-size:19px;line-height:1.22;margin:10px 0 8px}
+.module p{font-size:14px;line-height:1.5;color:#E6EDF7;margin:0}
+.method-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:32px}
+.method-item{text-align:center;padding:20px 12px}
+.method-item strong{display:block;color:var(--blue);font-size:17px;margin-bottom:5px}
+.method-item p{margin:0;font-size:14px;line-height:1.45}
+.note{text-align:center;margin:30px auto 0;max-width:850px;font-size:17px;color:var(--ink);font-weight:700}
+.forwho{grid-template-columns:1fr 1fr;align-items:center}
+.forwho p{font-size:16px;line-height:1.55}
+.list{display:grid;gap:12px}
+.list div{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);padding:15px 18px;font-weight:700}
+.formats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:45px}
+.format{border:1px solid var(--line);border-radius:10px;padding:22px}
+.format h3{color:#063C58;margin:0 0 8px;font-size:20px}
+.format p{margin:0;font-size:15px;line-height:1.5}
+.cta{background:linear-gradient(135deg,var(--navy2),var(--navy));color:#fff;text-align:center;padding:58px 20px}
+.cta h2{color:#fff}
+.cta p{max-width:700px;margin:0 auto 24px;font-size:16px;line-height:1.55}
+
+/* MOBILE */
+@media(max-width:950px){
+  .hero-grid,.two,.develop,.forwho{grid-template-columns:1fr}
+  .modules{grid-template-columns:1fr 1fr}
+  .method-grid{grid-template-columns:1fr 1fr}
+  .formats{grid-template-columns:1fr}
+  .main-nav{gap:14px}
+  .main-nav a{font-size:12px}
+  .brand img{width:190px}
+}
+@media(max-width:720px){
+  .site-header{height:70px}
+  .header-inner{justify-content:center}
+  .brand img{width:180px}
+  .main-nav{display:none}
+  .hero{padding-top:112px}
+}
+@media(max-width:620px){
+  section{padding:48px 0}
+  .grid2,.modules,.method-grid{grid-template-columns:1fr}
+  .hero h1{font-size:42px}
+  .lead{font-size:16px}
+  .hero-card{padding:21px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="https://www.monitorenegocios.com.br/" aria-label="Voltar para a página principal da Monitore">
+      <img style="filter: brightness(0) saturate(100%) invert(100%);" src="logo-monitore.png" alt="Monitore — Gestão de Negócios Empresariais">
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação da Jornada">
+      <a href="#jornada">A Jornada</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#para-quem">Para quem</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#faq">FAQ</a>
+      <a class="header-contact" href="https://wa.me/5511964019921?text=Ol%C3%A1%20Monitore!%20Quero%20apresentar%20um%20desafio%20de%20gest%C3%A3o%20inteligente." target="_blank" rel="noopener">
+        <span aria-hidden="true" class="whatsapp-icon">
+      <svg viewBox="0 0 24 24" role="img">
+        <path d="M20.5 3.5A11.8 11.8 0 0 0 12.08 0C5.56 0 .25 5.3.25 11.83c0 2.08.55 4.1 1.6 5.9L.17 24l6.42-1.68a11.8 11.8 0 0 0 5.49 1.35h.01c6.52 0 11.83-5.31 11.83-11.84 0-3.16-1.23-6.13-3.42-8.33ZM12.09 21.6h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.22-3.81 1 1.02-3.72-.24-.38a9.78 9.78 0 1 1 8.4 4.69Zm5.37-7.34c-.29-.15-1.73-.85-2- .95-.27-.1-.46-.15-.65.15-.19.29-.74.95-.9 1.14-.16.2-.33.22-.61.07-.29-.15-1.21-.45-2.3-1.43-.85-.76-1.43-1.7-1.6-1.99-.17-.29-.02-.45.13-.6.13-.13.29-.33.43-.49.14-.16.19-.27.29-.46.1-.2.05-.36-.02-.51-.07-.15-.65-1.56-.89-2.14-.23-.56-.47-.48-.65-.49h-.55c-.19 0-.49.07-.75.36-.26.29-.98.96-.98 2.35s1 2.73 1.14 2.92c.14.2 1.96 2.99 4.75 4.2.66.29 1.18.46 1.58.59.66.21 1.26.18 1.74.11.53-.08 1.73-.71 1.97-1.39.24-.69.24-1.28.17-1.4-.07-.12-.26-.19-.55-.34Z"/>
+      </svg>
+    </span> Fale conosco
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Trilha de Desenvolvimento · Monitore</div>
+      <h1>Inteligência <span>Empresarial</span></h1>
+      <p class="lead">Dados, indicadores, análise e ferramentas para apoiar decisões mais estruturadas e orientadas ao negócio.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#contato">Apresente seu desafio</a>
+        <a class="btn outline" href="#jornada">Conheça a trilha</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="label">A pergunta central</div>
+      <h2>Como transformar dados em decisões que realmente melhoram o negócio?</h2>
+      <p>Inteligência empresarial não é acumular dados. É saber o que medir, interpretar o que acontece e transformar informação em decisão e ação.</p>
+    </div>
+  </div>
+</section>
+
+<section id="jornada">
+  <div class="container two">
+    <div>
+      <div class="label">O desafio</div>
+      <h2 class="big">Ter dados não significa ter inteligência empresarial.</h2>
+    </div>
+    <div class="copy">
+      <p>Empresas geram dados o tempo todo. O desafio está em transformar números dispersos em informação confiável, indicadores úteis e análises que ajudem o negócio a decidir melhor.</p>
+      <p>O desafio não é ter mais relatórios. É construir uma lógica de gestão em que dados, indicadores, análise e contexto sejam usados para enxergar problemas, oportunidades e prioridades.</p>
+      <div class="quote">O ponto de partida não é a ferramenta. É o desafio de gestão.</div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="beneficios">
+  <div class="container">
+    <div class="center">
+      <div class="label">Quando a trilha faz sentido</div>
+      <h2>Talvez sua empresa esteja vivendo um destes desafios.</h2>
+      <p class="sub">A trilha desenvolve capacidade para organizar dados, construir indicadores, interpretar informações e usar ferramentas de análise para apoiar decisões mais estruturadas.</p>
+    </div>
+    <div class="grid2">
+      <div class="box"><h3>01 — Os dados estão espalhados?</h3><p>Informações em planilhas, sistemas e controles diferentes dificultam uma visão integrada do negócio.</p></div>
+      <div class="box"><h3>02 — Os indicadores realmente ajudam a decidir?</h3><p>Medir não basta. Um indicador precisa responder a uma pergunta de gestão e apoiar uma decisão.</p></div>
+      <div class="box"><h3>03 — A análise ainda depende de percepção?</h3><p>Quando os dados não são analisados de forma estruturada, a gestão pode reagir ao que parece urgente em vez de enxergar tendências e causas.</p></div>
+      <div class="box"><h3>04 — As ferramentas estão gerando informação ou apenas relatórios?</h3><p>Tecnologia e dashboards só geram valor quando ajudam a responder perguntas relevantes do negócio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container develop">
+    <div>
+      <div class="label">O que desenvolvemos</div>
+      <h2>Capacidade para transformar dados em inteligência para o negócio.</h2>
+      <p class="copy">A trilha trabalha competências para que profissionais consigam organizar dados, definir indicadores, analisar informações, utilizar ferramentas e conectar evidências às decisões do negócio.</p>
+    </div>
+    <div class="axes">
+      <div class="axis"><div class="num">01</div><div><h3>Dados e contexto do negócio</h3><p>Compreender quais dados importam para o negócio e como o contexto influencia sua leitura.</p></div></div>
+      <div class="axis"><div class="num">02</div><div><h3>Indicadores que orientam a gestão</h3><p>Construir indicadores com propósito, critérios e conexão com os objetivos da organização.</p></div></div>
+      <div class="axis"><div class="num">03</div><div><h3>Análise e interpretação</h3><p>Ler dados, identificar padrões, desvios, tendências e pontos que exigem investigação.</p></div></div>
+      <div class="axis"><div class="num">04</div><div><h3>Ferramentas para inteligência empresarial</h3><p>Utilizar recursos de análise e visualização de acordo com a necessidade da gestão.</p></div></div>
+      <div class="axis"><div class="num">05</div><div><h3>Decisão orientada ao negócio</h3><p>Transformar análise em prioridades, ações e acompanhamento de resultados.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="container">
+    <div class="center">
+      <div class="label">A trilha Inteligência Empresarial</div>
+      <h2>Um percurso que conecta conhecimento, prática e aplicação.</h2>
+      <p class="sub" style="color:#EDF3FA">A composição da trilha pode variar conforme o nível de maturidade, os dados disponíveis e os desafios de gestão da organização.</p>
+    </div>
+    <div class="modules">
+      <div class="module"><div class="num">EIXO 01</div><h3>Eu e o negócio</h3><p>Perguntas de negócio, contexto, prioridades e o que precisa ser acompanhado.</p></div>
+      <div class="module"><div class="num">EIXO 02</div><h3>Eu e os dados</h3><p>Organização, qualidade, fontes e leitura dos dados relevantes.</p></div>
+      <div class="module"><div class="num">EIXO 03</div><h3>Eu e a análise</h3><p>Análise e interpretação, adaptação da liderança, conflitos e desenvolvimento das pessoas.</p></div>
+      <div class="module"><div class="num">EIXO 04</div><h3>Eu e a decisão</h3><p>Prioridades, ações, acompanhamento e conexão com os resultados do negócio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona">
+  <div class="container">
+    <div class="center">
+      <div class="label">Nossa abordagem</div>
+      <h2>Não é apenas um curso de ferramentas.</h2>
+      <p class="sub">É um percurso que conecta conhecimento, prática e aplicação aos desafios reais de gestão.</p>
+    </div>
+    <div class="method-grid">
+      <div class="method-item"><strong>01 · Pergunta</strong><p>Entendemos o contexto do negócio, as perguntas de gestão e os dados disponíveis.</p></div>
+      <div class="method-item"><strong>02 · Dados</strong><p>Identificamos os dados e indicadores que ajudam a responder essa pergunta.</p></div>
+      <div class="method-item"><strong>03 · Indicadores</strong><p>Levamos dados, indicadores e situações reais de decisão para a experiência.</p></div>
+      <div class="method-item"><strong>04 · Análise</strong><p>A aplicação entra na rotina de gestão e nas decisões do negócio.</p></div>
+      <div class="method-item"><strong>05 · Decisão</strong><p>Avaliamos evolução, aplicações e próximos passos.</p></div>
+    </div>
+    <p class="note">Mais do que aprender ferramentas, você percorre um caminho para aprender a usá-las a serviço do negócio.</p>
+  </div>
+</section>
+
+<section class="light" id="para-quem">
+  <div class="container forwho">
+    <div>
+      <div class="label">Para quem é</div>
+      <h2>Para empresas que querem transformar dados em capacidade de gestão.</h2>
+      <p>A trilha pode ser adaptada para gestores, equipes de processos, áreas administrativas, financeiras, comerciais e organizações que precisam melhorar a qualidade das decisões.</p>
+    </div>
+    <div class="list">
+      <div>Gestores que precisam tomar decisões com mais evidências</div>
+      <div>Profissionais que trabalham com indicadores, controles e informações do negócio</div>
+      <div>Equipes que precisam estruturar indicadores e análises</div>
+      <div>Empresas que querem integrar dados à rotina de gestão</div>
+      <div>Organizações que estão ampliando o uso de tecnologia e dados</div>
+      <div>Empresas que precisam transformar relatórios em informação útil para decisão</div>
+      <div>Equipes que desejam transformar dados em ação e resultados</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="center">
+      <div class="label">Formato</div>
+      <h2>Construímos a trilha de acordo com o desafio.</h2>
+      <p class="sub">Não existe uma carga horária única ou um formato obrigatório. A solução é definida a partir da necessidade da organização.</p>
+    </div>
+    <div class="formats">
+      <div class="format"><h3>Presencial</h3><p>Experiência prática e interação direta com a equipe.</p></div>
+      <div class="format"><h3>Online</h3><p>Desenvolvimento remoto com aplicação orientada.</p></div>
+      <div class="format"><h3>Híbrido</h3><p>Combinação de desenvolvimento online e experiências presenciais.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="light">
+  <div class="container">
+    <div class="center">
+      <div class="label">Dúvidas frequentes</div>
+      <h2>FAQ</h2>
+      <p class="sub">A trilha é construída de acordo com o desafio e o contexto de cada organização.</p>
+    </div>
+    <div class="grid2">
+      <div class="box"><h3>A trilha ensina apenas uma ferramenta específica?</h3><p>Não. O foco é desenvolver raciocínio e capacidade de aplicação. As ferramentas são escolhidas conforme a necessidade do negócio.</p></div>
+      <div class="box"><h3>É uma formação apenas para profissionais de dados?</h3><p>Não. A trilha pode envolver gestores e equipes de diferentes áreas, porque inteligência empresarial precisa estar conectada à gestão.</p></div>
+      <div class="box"><h3>Pode ser adaptada à realidade da empresa?</h3><p>Sim. A trilha parte do contexto, dos desafios e do perfil das pessoas para definir os temas e experiências mais relevantes.</p></div>
+      <div class="box"><h3>Como começamos?</h3><p>Apresente o desafio da sua empresa. A Monitore avalia o contexto e propõe a composição mais adequada.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contato">
+  <div class="container">
+    <div class="label">Vamos conversar</div>
+    <h2>Sua empresa está preparada para transformar dados em decisões melhores?</h2>
+    <p>Conte-nos o desafio da sua empresa. A partir dele, construímos a trilha de desenvolvimento que faz sentido para sua realidade.</p>
+    <a class="btn primary" href="https://wa.me/5511964019921?text=Ol%C3%A1%20Monitore!%20Quero%20apresentar%20um%20desafio%20de%20intelig%C3%AAncia%20empresarial." target="_blank" rel="noopener">Fale conosco</a>
+  </div>
+</section>
+
+</main>
+
+<script>
+/* Ao clicar no menu, mantém o cabeçalho fixo e posiciona a seção corretamente. */
+document.querySelectorAll('.main-nav a[href^="#"]').forEach(link=>{
+  link.addEventListener('click', function(e){
+    const target=document.querySelector(this.getAttribute('href'));
+    if(!target)return;
+    e.preventDefault();
+    const header=document.querySelector('.site-header');
+    const y=target.getBoundingClientRect().top+window.pageYOffset-header.offsetHeight-10;
+    window.scrollTo({top:y,behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
