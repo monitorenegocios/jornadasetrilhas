@@ -4,11 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Favicon incorporado no próprio HTML para não depender de outro arquivo -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23243f8f' stroke-width='10'/%3E%3Ccircle cx='50' cy='50' r='28' fill='none' stroke='%23243f8f' stroke-width='9'/%3E%3Ccircle cx='50' cy='36' r='11' fill='%23243f8f'/%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23243f8f' stroke-width='10'/%3E%3Ccircle cx='50' cy='50' r='28' fill='none' stroke='%23243f8f' stroke-width='9'/%3E%3Ccircle cx='50' cy='36' r='11' fill='%23243f8f'/%3E%3C/svg%3E">
-<title>Excelência Operacional | Monitore Negócios</title>
-<meta name="description" content="Jornada Excelência Operacional — desenvolvimento de competências para melhorar processos, resolver problemas e elevar a performance.">
+<link rel="icon" type="image/png" href="favicon.png">
+<title>Trilha de Inteligência Empresarial | Monitore Negócios</title>
+<meta name="description" content="Trilha de Inteligência Empresarial — dados, indicadores, análise e ferramentas para apoiar decisões mais estruturadas e orientadas ao negócio.">
 
 <style>
 :root{
@@ -21,7 +19,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);line-heig
 a{text-decoration:none}
 .container{width:min(1120px,90%);margin:auto}
 
-/* CABEÇALHO FIXO */
+/* CABEÇALHO */
 .site-header{
   position:fixed;top:0;left:0;right:0;z-index:9999;
   height:78px;background:rgba(8,25,52,.98);
@@ -32,7 +30,10 @@ a{text-decoration:none}
   height:100%;display:flex;align-items:center;justify-content:space-between;gap:28px;
 }
 .brand{display:block;flex:0 0 auto}
-.brand img{width:245px;max-height:58px;object-fit:contain;display:block;filter:brightness(0) saturate(100%) invert(100%)}
+.brand img{
+  width:245px;max-height:58px;object-fit:contain;display:block;
+  filter:brightness(0) saturate(100%) invert(100%);
+}
 .main-nav{display:flex;align-items:center;justify-content:flex-end;gap:28px}
 .main-nav a{color:#fff;font-size:13px;white-space:nowrap}
 .header-contact{
@@ -40,7 +41,9 @@ a{text-decoration:none}
   border:1px solid var(--cyan);border-radius:28px;padding:10px 17px;
   color:#fff!important;font-weight:700;
 }
-.header-contact span{font-size:16px;line-height:1}.whatsapp-icon{display:inline-flex;width:17px;height:17px;color:currentColor}.whatsapp-icon svg{width:100%;height:100%;fill:currentColor}
+.header-contact span{font-size:16px;line-height:1}
+.whatsapp-icon{display:inline-flex;width:17px;height:17px;color:currentColor}
+.whatsapp-icon svg{width:100%;height:100%;fill:currentColor}
 
 /* HERO */
 .hero{
@@ -49,72 +52,140 @@ a{text-decoration:none}
   url("https://www.monitorenegocios.com.br/capa%20blog%20monitore.jpg") center/cover;
   padding:136px 0 58px;
 }
-.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--yellow)}
-.hero-grid{display:grid;grid-template-columns:1.25fr .82fr;gap:46px;align-items:center}
+.hero:after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--yellow)
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.25fr .82fr;gap:46px;align-items:center
+}
 .eyebrow,.label{
   color:#40A7E4;text-transform:uppercase;letter-spacing:3px;
-  font-size:14px;font-weight:800;margin-bottom:18px;
+  font-size:14px;font-weight:800;margin-bottom:18px
 }
 .hero h1{font-size:clamp(42px,4.8vw,62px);line-height:1.04;margin:0 0 16px}
 .hero h1 span{color:var(--blue)}
 .lead{font-size:17px;line-height:1.5;max-width:650px;color:#F4F7FB;margin:0 0 22px}
-.buttons{display:flex;gap:14px;flex-wrap:wrap}
-.btn{display:inline-block;border-radius:32px;padding:15px 28px;font-weight:800}
-.primary{background:#fff;color:#2456D6}
-.outline{border:1px solid #ffffff88;color:#fff}
-.hero-card{background:#0B3159;border:2px solid var(--cyan);border-radius:16px;padding:25px}
-.hero-card h2{font-size:23px;line-height:1.22;margin:9px 0 13px;color:#fff}
-.hero-card p{font-size:15px;line-height:1.52;margin:0}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 22px;border-radius:32px;font-size:15px;font-weight:700
+}
+.btn.primary{background:#fff;color:var(--navy)}
+.btn.outline{border:1px solid rgba(255,255,255,.55);color:#fff}
+.hero-card{
+  background:#0B3159;border:2px solid var(--cyan);border-radius:16px;padding:25px
+}
+.hero-card h2{font-size:23px;line-height:1.25;margin:0 0 12px;color:#fff}
+.hero-card p{margin:0;color:#EDF3FA}
 
 /* SEÇÕES */
 section{padding:58px 0}
-.two,.develop,.forwho{display:grid;grid-template-columns:1fr 1.25fr;gap:58px}
-.big,h2{color:var(--ink);font-size:clamp(30px,3.4vw,44px);line-height:1.14;margin:0}
-.copy{font-size:16px;line-height:1.58}
-.quote{margin-top:28px;padding:22px 25px;border-left:4px solid var(--blue);background:var(--light);color:var(--ink);font-size:20px;font-weight:700}
+.two,.develop,.forwho{
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center
+}
+h2{
+  color:var(--ink);font-size:clamp(30px,3.5vw,44px);
+  line-height:1.12;margin:0 0 18px
+}
+h2.big{font-size:clamp(30px,3.8vw,44px)}
+.copy{font-size:16px}
+.copy p{margin:0 0 18px}
+.quote{
+  border-left:4px solid var(--cyan);padding:16px 20px;
+  background:var(--light);font-weight:700;color:var(--ink)
+}
 .light{background:var(--light)}
-.center{text-align:center}
-.center h2{margin-bottom:15px}
-.sub{max-width:780px;margin:0 auto 34px;font-size:16px;line-height:1.55}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.box{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px}
-.box h3{color:var(--blue);font-size:19px;margin:0 0 8px}
-.box p{margin:0;font-size:15px;line-height:1.5}
-.axes{display:grid;gap:0}
-.axis{display:grid;grid-template-columns:46px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
-.axis:last-child{border:0}
-.num{color:var(--blue);font-weight:800}
-.axis h3{margin:0 0 4px;color:#063C58;font-size:19px}
-.axis p{margin:0;font-size:14px;line-height:1.5}
+.center{text-align:center;max-width:850px;margin:0 auto 36px}
+.center .sub{max-width:760px;margin:0 auto;color:#5C6470}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.box{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:23px
+}
+.box h3{margin:0 0 8px;color:var(--ink);font-size:18px}
+.box p{margin:0;font-size:15px}
+
+/* DESENVOLVIMENTO */
+.axes{display:flex;flex-direction:column;gap:14px}
+.axis{
+  display:grid;grid-template-columns:54px 1fr;gap:14px;
+  align-items:start;padding:17px 0;border-bottom:1px solid var(--line)
+}
+.axis:last-child{border-bottom:0}
+.axis .num{
+  width:42px;height:42px;border-radius:50%;
+  background:var(--navy);color:#fff;display:flex;
+  align-items:center;justify-content:center;font-weight:800
+}
+.axis h3{margin:0 0 3px;color:var(--ink);font-size:17px}
+.axis p{margin:0;font-size:14px}
+
+/* TRILHA */
 .dark{background:var(--navy);color:#fff}
-.dark .label{color:#40A7E4}
 .dark h2{color:#fff}
-.modules{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.module{border:1px solid #ffffff66;border-radius:10px;padding:20px 17px;min-height:190px;background:#ffffff05}
-.module .num{color:#40A7E4;font-size:13px;letter-spacing:1px}
-.module h3{font-size:19px;line-height:1.22;margin:10px 0 8px}
-.module p{font-size:14px;line-height:1.5;color:#E6EDF7;margin:0}
-.method-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:32px}
-.method-item{text-align:center;padding:20px 12px}
-.method-item strong{display:block;color:var(--blue);font-size:17px;margin-bottom:5px}
-.method-item p{margin:0;font-size:14px;line-height:1.45}
-.note{text-align:center;margin:30px auto 0;max-width:850px;font-size:17px;color:var(--ink);font-weight:700}
-.forwho{grid-template-columns:1fr 1fr;align-items:center}
-.forwho p{font-size:16px;line-height:1.55}
-.list{display:grid;gap:12px}
-.list div{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);padding:15px 18px;font-weight:700}
-.formats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:45px}
-.format{border:1px solid var(--line);border-radius:10px;padding:22px}
-.format h3{color:#063C58;margin:0 0 8px;font-size:20px}
-.format p{margin:0;font-size:15px;line-height:1.5}
-.cta{background:linear-gradient(135deg,var(--navy2),var(--navy));color:#fff;text-align:center;padding:58px 20px}
+.dark .label{color:#59C5D2}
+.path{
+  display:grid;grid-template-columns:repeat(6,1fr);
+  gap:0;margin-top:36px
+}
+.path-item{
+  position:relative;text-align:center;padding:0 10px
+}
+.path-item:not(:last-child):after{
+  content:"";position:absolute;top:21px;right:-8px;
+  width:16px;height:2px;background:var(--cyan)
+}
+.path-number{
+  width:44px;height:44px;margin:0 auto 13px;border-radius:50%;
+  border:2px solid var(--cyan);display:flex;align-items:center;
+  justify-content:center;color:#fff;font-weight:800;background:var(--navy)
+}
+.path-item strong{display:block;font-size:15px;color:#fff}
+.path-item p{margin:5px 0 0;font-size:13px;color:#DCE7F3}
+.trilha-note{
+  max-width:800px;margin:30px auto 0;text-align:center;
+  color:#E8F1F8;font-size:15px
+}
+
+/* COMO FUNCIONA */
+.method-grid{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)
+}
+.method-item{
+  padding:22px 17px;border-right:1px solid var(--line)
+}
+.method-item:last-child{border-right:0}
+.method-item strong{display:block;color:var(--navy);font-size:16px;margin-bottom:7px}
+.method-item p{margin:0;font-size:14px}
+.note{
+  max-width:850px;margin:25px auto 0;padding:18px 22px;
+  background:var(--light);border-left:4px solid var(--blue);
+  color:var(--ink);font-weight:700
+}
+
+/* FORMATO */
+.formats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.format{
+  border:1px solid var(--line);border-radius:12px;padding:22px;background:#fff
+}
+.format h3{margin:0 0 7px;color:var(--ink)}
+.format p{margin:0;font-size:14px}
+
+/* CTA */
+.cta{
+  background:linear-gradient(135deg,var(--navy2),var(--navy));
+  color:#fff;text-align:center;padding:58px 20px
+}
 .cta h2{color:#fff}
 .cta p{max-width:700px;margin:0 auto 24px;font-size:16px;line-height:1.55}
+.cta .btn.primary{color:var(--navy)}
 
 /* MOBILE */
 @media(max-width:950px){
   .hero-grid,.two,.develop,.forwho{grid-template-columns:1fr}
-  .modules{grid-template-columns:1fr 1fr}
+  .path{grid-template-columns:repeat(3,1fr);gap:28px 0}
+  .path-item:nth-child(3):after,.path-item:nth-child(6):after{display:none}
   .method-grid{grid-template-columns:1fr 1fr}
   .formats{grid-template-columns:1fr}
   .main-nav{gap:14px}
@@ -130,7 +201,9 @@ section{padding:58px 0}
 }
 @media(max-width:620px){
   section{padding:48px 0}
-  .grid2,.modules,.method-grid{grid-template-columns:1fr}
+  .grid2,.method-grid{grid-template-columns:1fr}
+  .path{grid-template-columns:1fr 1fr;gap:25px 0}
+  .path-item:after{display:none!important}
   .hero h1{font-size:42px}
   .lead{font-size:16px}
   .hero-card{padding:21px}
@@ -143,21 +216,21 @@ section{padding:58px 0}
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="https://www.monitorenegocios.com.br/" aria-label="Voltar para a página principal da Monitore">
-      <img style="filter: brightness(0) saturate(100%) invert(100%);" src="logo-monitore.png" alt="Monitore — Gestão de Negócios Empresariais">
+      <img src="logo-monitore.png" alt="Monitore — Gestão de Negócios Empresariais">
     </a>
 
-    <nav class="main-nav" aria-label="Navegação da Jornada">
-      <a href="#jornada">A Jornada</a>
+    <nav class="main-nav" aria-label="Navegação da Trilha">
+      <a href="#trilha">A Trilha</a>
       <a href="#beneficios">Benefícios</a>
       <a href="#para-quem">Para quem</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#faq">FAQ</a>
-      <a class="header-contact" href="https://wa.me/5511964019921?text=Ol%C3%A1%20Monitore!%20Quero%20apresentar%20um%20desafio%20de%20excel%C3%AAncia%20operacional." target="_blank" rel="noopener">
+      <a class="header-contact" href="https://wa.me/5511964019921?text=Ol%C3%A1%20Monitore!%20Quero%20conhecer%20a%20Trilha%20de%20Intelig%C3%AAncia%20Empresarial." target="_blank" rel="noopener">
         <span aria-hidden="true" class="whatsapp-icon">
-      <svg viewBox="0 0 24 24" role="img">
-        <path d="M20.5 3.5A11.8 11.8 0 0 0 12.08 0C5.56 0 .25 5.3.25 11.83c0 2.08.55 4.1 1.6 5.9L.17 24l6.42-1.68a11.8 11.8 0 0 0 5.49 1.35h.01c6.52 0 11.83-5.31 11.83-11.84 0-3.16-1.23-6.13-3.42-8.33ZM12.09 21.6h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.22-3.81 1 1.02-3.72-.24-.38a9.78 9.78 0 1 1 8.4 4.69Zm5.37-7.34c-.29-.15-1.73-.85-2- .95-.27-.1-.46-.15-.65.15-.19.29-.74.95-.9 1.14-.16.2-.33.22-.61.07-.29-.15-1.21-.45-2.3-1.43-.85-.76-1.43-1.7-1.6-1.99-.17-.29-.02-.45.13-.6.13-.13.29-.33.43-.49.14-.16.19-.27.29-.46.1-.2.05-.36-.02-.51-.07-.15-.65-1.56-.89-2.14-.23-.56-.47-.48-.65-.49h-.55c-.19 0-.49.07-.75.36-.26.29-.98.96-.98 2.35s1 2.73 1.14 2.92c.14.2 1.96 2.99 4.75 4.2.66.29 1.18.46 1.58.59.66.21 1.26.18 1.74.11.53-.08 1.73-.71 1.97-1.39.24-.69.24-1.28.17-1.4-.07-.12-.26-.19-.55-.34Z"/>
-      </svg>
-    </span> Fale conosco
+          <svg viewBox="0 0 24 24" role="img">
+            <path d="M20.5 3.5A11.8 11.8 0 0 0 12.08 0C5.56 0 .25 5.3.25 11.83c0 2.08.55 4.1 1.6 5.9L.17 24l6.42-1.68a11.8 11.8 0 0 0 5.49 1.35h.01c6.52 0 11.83-5.31 11.83-11.84 0-3.16-1.23-6.13-3.42-8.33ZM12.09 21.6h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.22-3.81 1 1.02-3.72-.24-.38a9.8 9.8 0 1 1 7.36 3.79Zm5.39-7.34c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.69.15-.2.3-.79.98-.96 1.18-.18.2-.35.23-.65.08-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.5-1.79-1.67-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.69-1.66-.94-2.28-.25-.6-.5-.52-.69-.53-.18-.01-.38-.01-.58-.01-.2 0-.53.08-.81.38-.28.3-1.06 1.04-1.06 2.54s1.08 2.95 1.23 3.15c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.12-.28-.2-.58-.35Z"/>
+          </svg>
+        </span> Fale conosco
       </a>
     </nav>
   </div>
@@ -168,32 +241,76 @@ section{padding:58px 0}
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="eyebrow">Jornada de Desenvolvimento · Monitore</div>
-      <h1>Excelência <span>Operacional</span></h1>
-      <p class="lead">Desenvolvimento de competências para melhorar processos, resolver problemas e elevar a performance.</p>
+      <div class="eyebrow">Trilha de Desenvolvimento · Monitore</div>
+      <h1>Trilha de <span>Inteligência Empresarial</span></h1>
+      <p class="lead">Dados, indicadores, análise e ferramentas para apoiar decisões mais estruturadas e orientadas ao negócio.</p>
       <div class="buttons">
         <a class="btn primary" href="#contato">Apresente seu desafio</a>
-        <a class="btn outline" href="#jornada">Conheça a jornada</a>
+        <a class="btn outline" href="#trilha">Conheça a trilha</a>
       </div>
     </div>
+
     <div class="hero-card">
       <div class="label">A pergunta central</div>
-      <h2>Como transformar processos melhores em resultados melhores?</h2>
-      <p>Uma operação preparada identifica problemas, melhora processos e transforma eficiência em performance.</p>
+      <h2>Como transformar dados em decisões que realmente melhoram o negócio?</h2>
+      <p>Inteligência empresarial não é acumular dados. É saber o que medir, interpretar o que acontece e transformar informação em decisão e ação.</p>
     </div>
   </div>
 </section>
 
-<section id="jornada">
+<section id="trilha">
   <div class="container two">
     <div>
-      <div class="label">O desafio</div>
-      <h2 class="big">Excelência operacional não é trabalhar mais. É trabalhar melhor.</h2>
+      <div class="label">O ponto de partida</div>
+      <h2 class="big">O desafio do negócio vem antes da ferramenta.</h2>
     </div>
     <div class="copy">
-      <p>Toda empresa possui processos. O desafio está em fazer com que eles sejam eficientes, claros, consistentes e orientados a resultados.</p>
-      <p>O desafio da excelência operacional é identificar gargalos, eliminar desperdícios, resolver causas e criar uma rotina de melhoria contínua.</p>
-      <div class="quote">Melhorar processos não é fazer mudanças isoladas. É criar capacidade para resolver problemas e sustentar resultados.</div>
+      <p>Empresas podem ter sistemas, planilhas, dashboards e muitos dados — e ainda assim tomar decisões baseadas em percepção.</p>
+      <p>A Trilha de Inteligência Empresarial desenvolve a capacidade de percorrer um caminho estruturado: compreender o contexto, organizar dados, construir indicadores, analisar informações e transformar conhecimento em decisão.</p>
+      <div class="quote">Mais do que aprender ferramentas, você percorre um caminho para aprender a usá-las a serviço do negócio.</div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="container">
+    <div class="center">
+      <div class="label">O percurso da Trilha</div>
+      <h2>Da pergunta ao resultado.</h2>
+      <p class="sub" style="color:#EDF3FA">A trilha organiza o desenvolvimento em uma sequência lógica, conectando dados, análise e decisão ao contexto real da empresa.</p>
+    </div>
+
+    <div class="path">
+      <div class="path-item">
+        <div class="path-number">01</div>
+        <strong>Dados</strong>
+        <p>Entender o que existe e o que é relevante.</p>
+      </div>
+      <div class="path-item">
+        <div class="path-number">02</div>
+        <strong>Indicadores</strong>
+        <p>Definir o que precisa ser acompanhado.</p>
+      </div>
+      <div class="path-item">
+        <div class="path-number">03</div>
+        <strong>Análise</strong>
+        <p>Interpretar informações e identificar padrões.</p>
+      </div>
+      <div class="path-item">
+        <div class="path-number">04</div>
+        <strong>Ferramentas</strong>
+        <p>Usar recursos para organizar e visualizar.</p>
+      </div>
+      <div class="path-item">
+        <div class="path-number">05</div>
+        <strong>Decisão</strong>
+        <p>Transformar informação em ação.</p>
+      </div>
+      <div class="path-item">
+        <div class="path-number">06</div>
+        <strong>Resultado</strong>
+        <p>Conectar decisões à performance do negócio.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -201,15 +318,16 @@ section{padding:58px 0}
 <section class="light" id="beneficios">
   <div class="container">
     <div class="center">
-      <div class="label">Quando a jornada faz sentido</div>
-      <h2>Talvez sua operação esteja vivendo um destes desafios.</h2>
-      <p class="sub">A jornada desenvolve competências para compreender processos, resolver problemas e criar condições para uma operação mais eficiente e previsível.</p>
+      <div class="label">Quando a trilha faz sentido</div>
+      <h2>Talvez sua empresa esteja vivendo um destes desafios.</h2>
+      <p class="sub">A trilha ajuda a transformar informação dispersa em capacidade de análise e decisão.</p>
     </div>
+
     <div class="grid2">
-      <div class="box"><h3>01 — Os processos estão gerando retrabalho?</h3><p>Processos pouco claros, falhas e falta de padrão podem gerar retrabalho, atrasos e perda de produtividade.</p></div>
-      <div class="box"><h3>02 — Os problemas continuam se repetindo?</h3><p>Quando a causa não é investigada, o mesmo problema volta a acontecer e consome recursos da equipe.</p></div>
-      <div class="box"><h3>03 — Existem gargalos e desperdícios?</h3><p>Esperas, movimentações desnecessárias, excesso de etapas e atividades sem valor reduzem a eficiência.</p></div>
-      <div class="box"><h3>04 — Os indicadores mostram a realidade da operação?</h3><p>Sem indicadores adequados, a gestão pode agir pela percepção e descobrir os problemas tarde demais.</p></div>
+      <div class="box"><h3>01 — Os dados estão espalhados?</h3><p>Informações em diferentes sistemas e planilhas dificultam uma visão integrada do negócio.</p></div>
+      <div class="box"><h3>02 — Os indicadores realmente ajudam a decidir?</h3><p>Medir muitas coisas não significa acompanhar aquilo que realmente orienta a gestão.</p></div>
+      <div class="box"><h3>03 — A análise ainda depende de percepção?</h3><p>Decisões mais consistentes exigem capacidade para interpretar evidências e identificar causas.</p></div>
+      <div class="box"><h3>04 — As ferramentas estão gerando informação ou apenas relatórios?</h3><p>Tecnologia e dashboards precisam estar conectados às perguntas e decisões do negócio.</p></div>
     </div>
   </div>
 </section>
@@ -218,50 +336,37 @@ section{padding:58px 0}
   <div class="container develop">
     <div>
       <div class="label">O que desenvolvemos</div>
-      <h2>Capacidade para melhorar processos e elevar a performance.</h2>
-      <p class="copy">A jornada trabalha competências para que profissionais consigam compreender processos, investigar causas, aplicar ferramentas de melhoria e transformar problemas em resultados.</p>
+      <h2>Capacidade para transformar informação em decisão.</h2>
+      <p class="copy">A trilha desenvolve conhecimentos e capacidades para que profissionais consigam compreender dados, construir indicadores, analisar informações e utilizar ferramentas de forma conectada aos objetivos do negócio.</p>
     </div>
+
     <div class="axes">
-      <div class="axis"><div class="num">01</div><div><h3>Visão sistêmica e compreensão dos processos</h3><p>Enxergar o processo de ponta a ponta e compreender como as atividades se conectam.</p></div></div>
-      <div class="axis"><div class="num">02</div><div><h3>Mapeamento e melhoria de processos</h3><p>Identificar gargalos, desperdícios, riscos e oportunidades de simplificação.</p></div></div>
-      <div class="axis"><div class="num">03</div><div><h3>Análise e solução de problemas</h3><p>Investigar causas e construir soluções sustentáveis para problemas recorrentes.</p></div></div>
-      <div class="axis"><div class="num">04</div><div><h3>Melhoria contínua e ferramentas da qualidade</h3><p>Aplicar métodos e ferramentas para organizar, priorizar e sustentar melhorias.</p></div></div>
-      <div class="axis"><div class="num">05</div><div><h3>Indicadores, produtividade e performance</h3><p>Conectar processos, indicadores e resultados para melhorar a tomada de decisão.</p></div></div>
+      <div class="axis"><div class="num">01</div><div><h3>Dados e contexto do negócio</h3><p>Compreender fontes, qualidade, organização e relevância das informações.</p></div></div>
+      <div class="axis"><div class="num">02</div><div><h3>Indicadores que orientam a gestão</h3><p>Selecionar e estruturar indicadores que respondam às necessidades do negócio.</p></div></div>
+      <div class="axis"><div class="num">03</div><div><h3>Análise e interpretação</h3><p>Transformar dados em leitura, diagnóstico e compreensão dos cenários.</p></div></div>
+      <div class="axis"><div class="num">04</div><div><h3>Ferramentas para inteligência empresarial</h3><p>Utilizar recursos tecnológicos para organizar, visualizar e explorar informações.</p></div></div>
+      <div class="axis"><div class="num">05</div><div><h3>Decisão orientada ao negócio</h3><p>Conectar análises a escolhas, ações e resultados concretos.</p></div></div>
     </div>
   </div>
 </section>
 
-<section class="dark">
+<section class="light" id="como-funciona">
   <div class="container">
     <div class="center">
-      <div class="label">A jornada Excelência Operacional</div>
-      <h2>Desenvolvimento que acontece na prática.</h2>
-      <p class="sub" style="color:#EDF3FA">A composição da jornada pode variar conforme o diagnóstico, o nível de maturidade e os desafios da operação.</p>
+      <div class="label">Como funciona</div>
+      <h2>Um percurso estruturado de desenvolvimento.</h2>
+      <p class="sub">A trilha combina conhecimento, prática e aplicação para que cada etapa faça sentido na realidade do negócio.</p>
     </div>
-    <div class="modules">
-      <div class="module"><div class="num">EIXO 01</div><h3>Eu e os processos</h3><p>Visão do processo, fluxo de trabalho, gargalos e oportunidades de melhoria.</p></div>
-      <div class="module"><div class="num">EIXO 02</div><h3>Eu e os problemas</h3><p>Análise de causas, priorização, solução estruturada e prevenção de recorrências.</p></div>
-      <div class="module"><div class="num">EIXO 03</div><h3>Eu e a melhoria</h3><p>Análise e solução de problemas, adaptação da liderança, conflitos e desenvolvimento das pessoas.</p></div>
-      <div class="module"><div class="num">EIXO 04</div><h3>Eu e os resultados</h3><p>Conexão entre processos, indicadores, produtividade, qualidade e resultados do negócio.</p></div>
-    </div>
-  </div>
-</section>
 
-<section id="como-funciona">
-  <div class="container">
-    <div class="center">
-      <div class="label">Nossa abordagem</div>
-      <h2>Não é apenas um treinamento de ferramentas.</h2>
-      <p class="sub">É um processo de desenvolvimento que conecta conhecimento, prática e aplicação aos desafios reais da operação.</p>
-    </div>
     <div class="method-grid">
-      <div class="method-item"><strong>Diagnóstico</strong><p>Entendemos o contexto, os processos e os principais desafios da operação.</p></div>
-      <div class="method-item"><strong>Desenvolvimento</strong><p>Trabalhamos as capacidades prioritárias para o contexto da organização.</p></div>
-      <div class="method-item"><strong>Prática</strong><p>Levamos problemas e situações reais da operação para a experiência.</p></div>
-      <div class="method-item"><strong>Aplicação</strong><p>As melhorias entram na rotina e nos processos de trabalho.</p></div>
-      <div class="method-item"><strong>Acompanhamento</strong><p>Avaliamos evolução, resultados e próximos passos.</p></div>
+      <div class="method-item"><strong>01 · Pergunta</strong><p>Partimos do desafio ou da pergunta que o negócio precisa responder.</p></div>
+      <div class="method-item"><strong>02 · Dados</strong><p>Identificamos, organizamos e compreendemos as informações necessárias.</p></div>
+      <div class="method-item"><strong>03 · Indicadores</strong><p>Estruturamos aquilo que precisa ser medido e acompanhado.</p></div>
+      <div class="method-item"><strong>04 · Análise</strong><p>Interpretamos os dados e construímos uma visão mais consistente.</p></div>
+      <div class="method-item"><strong>05 · Decisão</strong><p>Transformamos a análise em direcionamento e ação.</p></div>
     </div>
-    <p class="note">O objetivo não é ensinar ferramentas isoladas. É desenvolver a capacidade de melhorar processos, resolver problemas e sustentar resultados.</p>
+
+    <p class="note">O ponto de partida não é a ferramenta. É o desafio de gestão. A ferramenta entra como meio para ampliar a capacidade de análise e decisão.</p>
   </div>
 </section>
 
@@ -269,17 +374,18 @@ section{padding:58px 0}
   <div class="container forwho">
     <div>
       <div class="label">Para quem é</div>
-      <h2>Para empresas que querem fortalecer uma operação capaz de gerar eficiência, qualidade e resultados.</h2>
-      <p>A jornada pode ser adaptada para líderes, equipes operacionais, áreas de processos e organizações que estão buscando elevar sua performance.</p>
+      <h2>Para profissionais e empresas que querem decidir melhor a partir de informação.</h2>
+      <p>A trilha é indicada para quem precisa desenvolver uma visão mais analítica do negócio e transformar dados em decisões mais estruturadas.</p>
     </div>
+
     <div class="list">
-      <div>Líderes e gestores que precisam melhorar processos e resultados</div>
-      <div>Profissionais de processos, qualidade e melhoria contínua</div>
-      <div>Equipes que enfrentam retrabalho, gargalos ou problemas recorrentes</div>
-      <div>Empresas que desejam fortalecer uma cultura de excelência operacional</div>
-      <div>Organizações que estão passando por transformação e precisam melhorar sua operação</div>
-      <div>Empresas que precisam aumentar produtividade, qualidade e eficiência</div>
-      <div>Equipes que desejam transformar problemas em melhoria e resultados</div>
+      <div>Profissionais que trabalham com dados, indicadores e informações gerenciais</div>
+      <div>Gestores que precisam tomar decisões com mais evidências</div>
+      <div>Empresas que querem fortalecer uma cultura orientada por dados</div>
+      <div>Equipes que precisam estruturar indicadores e dashboards</div>
+      <div>Profissionais que querem ampliar sua capacidade analítica</div>
+      <div>Organizações que desejam utilizar tecnologia de forma mais estratégica</div>
+      <div>Empresas que querem transformar dados em inteligência para o negócio</div>
     </div>
   </div>
 </section>
@@ -288,13 +394,14 @@ section{padding:58px 0}
   <div class="container">
     <div class="center">
       <div class="label">Formato</div>
-      <h2>Construímos a jornada de acordo com o desafio.</h2>
-      <p class="sub">Não existe uma carga horária única ou um formato obrigatório. A solução é definida a partir da necessidade da organização.</p>
+      <h2>A trilha pode acontecer onde o desenvolvimento fizer mais sentido.</h2>
+      <p class="sub">Presencial, online ou híbrido, mantendo a lógica de percurso, prática e aplicação.</p>
     </div>
+
     <div class="formats">
-      <div class="format"><h3>Presencial</h3><p>Experiência prática e interação direta com a equipe.</p></div>
-      <div class="format"><h3>Online</h3><p>Desenvolvimento remoto com aplicação orientada.</p></div>
-      <div class="format"><h3>Híbrido</h3><p>Combinação de desenvolvimento online e experiências presenciais.</p></div>
+      <div class="format"><h3>Presencial</h3><p>Experiência prática, interação e aplicação direta com equipes.</p></div>
+      <div class="format"><h3>Online</h3><p>Desenvolvimento remoto com atividades e aplicação orientada.</p></div>
+      <div class="format"><h3>Híbrido</h3><p>Combinação de momentos online e experiências presenciais.</p></div>
     </div>
   </div>
 </section>
@@ -304,13 +411,16 @@ section{padding:58px 0}
     <div class="center">
       <div class="label">Dúvidas frequentes</div>
       <h2>FAQ</h2>
-      <p class="sub">A jornada é construída de acordo com o desafio e o contexto de cada organização.</p>
+      <p class="sub">Entenda como funciona a Trilha de Inteligência Empresarial.</p>
     </div>
+
     <div class="grid2">
-      <div class="box"><h3>A jornada trabalha apenas ferramentas da qualidade?</h3><p>Não. O foco é desenvolver raciocínio, método e capacidade de aplicação. As ferramentas são utilizadas de acordo com o desafio.</p></div>
-      <div class="box"><h3>É uma formação apenas para equipes operacionais?</h3><p>Não. A jornada pode envolver líderes, gestores, equipes operacionais, processos e áreas de apoio, conforme o desafio.</p></div>
-      <div class="box"><h3>Pode ser adaptada à realidade da empresa?</h3><p>Sim. A jornada parte do contexto, dos desafios e do perfil das pessoas para definir os temas e experiências mais relevantes.</p></div>
-      <div class="box"><h3>Como começamos?</h3><p>Apresente o desafio da sua empresa. A Monitore avalia o contexto e propõe a composição mais adequada.</p></div>
+      <div class="box"><h3>A trilha é um curso de ferramentas?</h3><p>Não. As ferramentas são utilizadas como meio. O desenvolvimento começa pelo desafio do negócio e pela necessidade de decisão.</p></div>
+      <div class="box"><h3>Preciso dominar ferramentas de dados?</h3><p>Não necessariamente. A trilha pode partir do nível atual dos participantes e desenvolver gradualmente as capacidades necessárias.</p></div>
+      <div class="box"><h3>A trilha tem uma sequência definida?</h3><p>Sim. O percurso segue uma lógica de desenvolvimento, conectando pergunta, dados, indicadores, análise e decisão.</p></div>
+      <div class="box"><h3>Podemos aplicar a trilha à realidade da empresa?</h3><p>Sim. A aplicação aos desafios reais do negócio é parte importante do desenvolvimento.</p></div>
+      <div class="box"><h3>Qual é a carga horária?</h3><p>A duração pode variar conforme o público, o nível de desenvolvimento e a profundidade desejada.</p></div>
+      <div class="box"><h3>Como começamos?</h3><p>Apresente o desafio da sua empresa. A Monitore avalia o contexto e propõe a composição mais adequada da trilha.</p></div>
     </div>
   </div>
 </section>
@@ -318,16 +428,15 @@ section{padding:58px 0}
 <section class="cta" id="contato">
   <div class="container">
     <div class="label">Vamos conversar</div>
-    <h2>Sua operação está preparada para transformar problemas em melhoria e resultados?</h2>
-    <p>Conte-nos o desafio da sua empresa. A partir dele, construímos a jornada de desenvolvimento que faz sentido para sua realidade.</p>
-    <a class="btn primary" href="https://wa.me/5511964019921?text=Ol%C3%A1%20Monitore!%20Quero%20apresentar%20um%20desafio%20de%20excel%C3%AAncia%20operacional." target="_blank" rel="noopener">Fale conosco</a>
+    <h2>Seus dados estão ajudando sua empresa a decidir melhor?</h2>
+    <p>Conte-nos o desafio do seu negócio. A partir dele, construímos o percurso de desenvolvimento que faz sentido para transformar informação em decisão.</p>
+    <a class="btn primary" href="https://wa.me/5511964019921?text=Ol%C3%A1%20Monitore!%20Quero%20conhecer%20a%20Trilha%20de%20Intelig%C3%AAncia%20Empresarial." target="_blank" rel="noopener">Fale conosco</a>
   </div>
 </section>
 
 </main>
 
 <script>
-/* Ao clicar no menu, mantém o cabeçalho fixo e posiciona a seção corretamente. */
 document.querySelectorAll('.main-nav a[href^="#"]').forEach(link=>{
   link.addEventListener('click', function(e){
     const target=document.querySelector(this.getAttribute('href'));
@@ -339,5 +448,6 @@ document.querySelectorAll('.main-nav a[href^="#"]').forEach(link=>{
   });
 });
 </script>
+
 </body>
 </html>
