@@ -6,7 +6,8 @@
 <title>Semana da Qualidade 2026 | Monitore Negócios</title>
 <meta name="description" content="Entenda o Dia Mundial, a Semana e o Mês da Qualidade e leve para sua empresa uma palestra de 2 horas com dinâmica. Solicite seu orçamento.">
 <link rel="icon" type="image/png" sizes="512x512" href="/semanadaqualidade2026/favicon-512.png">
-<link rel="apple-touch-icon" href=/semanadaqualidade2026/favicon-512.png">
+<link rel="shortcut icon" type="image/png" href="/semanadaqualidade2026/favicon-512.png">
+<link rel="apple-touch-icon" sizes="512x512" href="/semanadaqualidade2026/favicon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -96,6 +97,7 @@ section{padding:18px 0}
 .highlight{background:#fff;border-left:4px solid var(--navy);padding:20px;border-radius:6px;font-weight:600}
 .form-box{background:#fff;padding:30px;border-radius:11px;box-shadow:0 15px 50px rgba(20,35,65,.07)}
 .form-box h3{font-size:23px;margin-bottom:23px}
+.return-message{display:none;margin:0 0 18px;padding:14px 16px;border-radius:8px;background:#eef5ff;color:#233774;font-size:14px;line-height:1.5;border:1px solid #d7e3f7}.return-message.show{display:block}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .field{margin-bottom:16px}
 .field label{display:block;font-size:11px;font-weight:800;margin-bottom:6px}
@@ -363,6 +365,7 @@ e Instituto Português da Qualidade (IPQ).
 <div class="form-box">
 <h3>Solicitar orçamento</h3>
 <p style="margin:-12px 0 20px;color:#667085;font-size:13px">Ao enviar, sua solicitação será direcionada para <strong>comercial@monitorenegocios.com.br</strong>.</p>
+<div id="retornoOrcamento" class="return-message" role="status" aria-live="polite"></div>
 <form id="orcamentoForm">
 <div class="form-row">
 <div class="field"><label>Nome *</label><input type="text" id="nome" required placeholder="Seu nome"></div>
@@ -417,6 +420,9 @@ const corpo="Olá, equipe comercial da Monitore!\n\nGostaria de solicitar um or�
 "Participantes: "+valores.participantes+"\n"+
 "Data prevista: "+valores.data+"\n\n"+
 "Informações sobre o evento:\n"+valores.mensagem;
+const retorno=document.getElementById("retornoOrcamento");
+retorno.innerHTML="<strong>Solicitação preparada com sucesso.</strong><br>Seu aplicativo de e-mail será aberto para enviar a solicitação ao nosso Comercial: <strong>comercial@monitorenegocios.com.br</strong>. Após o envio, a equipe da Monitore entrará em contato para dar continuidade ao orçamento.";
+retorno.classList.add("show");
 window.location.href="mailto:comercial@monitorenegocios.com.br?subject="+encodeURIComponent(assunto)+"&body="+encodeURIComponent(corpo);
 });
 </script>
