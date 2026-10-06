@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semana da Qualidade 2026 | Monitore Negócios</title>
+<meta name="description" content="Entenda o Dia Mundial, a Semana e o Mês da Qualidade e leve para sua empresa uma palestra de 2 horas com dinâmica. Solicite seu orçamento.">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+<link rel="apple-touch-icon" href="favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{--navy:#233774;--dark:#172755;--light:#eaf0fb;--gray:#f5f7fa;--text:#172033;--muted:#647084;--line:#dfe5ef}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Montserrat,Arial,sans-serif;color:var(--text);line-height:1.6}
+.container{width:92%;max-width:1180px;margin:auto}
+header{position:absolute;top:0;left:0;width:100%;z-index:10;background:#fff;padding:17px 0;border-bottom:1px solid #edf0f5}
+.header{display:flex;justify-content:space-between;align-items:center}
+.logo{width:205px;display:block;background:transparent}
+.header-btn{border:1px solid var(--navy);color:var(--navy);padding:11px 20px;border-radius:30px;text-decoration:none;font-size:12px;font-weight:800}
+.header-btn:hover{background:var(--navy);color:#fff}
+
+.hero{min-height:555px;padding-top:92px;display:flex;align-items:center;background:linear-gradient(135deg,var(--dark),var(--navy));color:#fff;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:650px;height:650px;border:1px solid rgba(255,255,255,.08);border-radius:50%;right:-250px;bottom:-340px}
+.hero-content{max-width:850px;position:relative;z-index:2}
+.tag{display:inline-block;border:1px solid rgba(255,255,255,.35);padding:8px 15px;border-radius:30px;font-size:11px;font-weight:800;letter-spacing:1.6px;margin-bottom:24px}
+.hero h1{font-size:clamp(40px,6vw,68px);line-height:1.05;letter-spacing:-3px;margin-bottom:24px}
+.hero h1 span{color:#fff}
+.hero p{font-size:19px;max-width:760px;color:rgba(255,255,255,.84);margin-bottom:32px}
+.btn{display:inline-block;background:#fff;color:var(--navy);padding:16px 27px;border-radius:6px;text-decoration:none;font-size:13px;font-weight:800}
+.btn:hover{transform:translateY(-2px)}
+.hero-info{display:flex;gap:35px;margin-top:40px;flex-wrap:wrap}
+.hero-info div{border-left:2px solid rgba(255,255,255,.35);padding-left:15px}
+.hero-info strong{display:block;font-size:19px}
+.hero-info span{font-size:11px;color:rgba(255,255,255,.65)}
+
+section{padding:18px 0}
+.section-title{max-width:780px;margin-bottom:16px}
+.section-title small{color:var(--navy);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.section-title h2{font-size:clamp(29px,3.6vw,43px);line-height:1.1;letter-spacing:-1.5px;margin:8px 0 12px}
+.section-title p{color:var(--muted);font-size:16px}
+
+.explain{background:#fff}
+.explain-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.explain-text h3{font-size:29px;line-height:1.2;margin-bottom:18px}
+.explain-text p{color:var(--muted);margin-bottom:17px}
+.points{display:grid;gap:14px}
+.point{padding:19px 20px;background:var(--gray);border-left:4px solid var(--navy);border-radius:7px;font-weight:600}
+.point span{display:block;color:var(--muted);font-size:12px;font-weight:400;margin-top:3px}
+
+.why{background:var(--gray)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:#fff;padding:27px 23px;border-radius:9px;border:1px solid var(--line)}
+.card h3{font-size:19px;margin:12px 0 8px}
+.card p{font-size:13px;color:var(--muted)}
+.num{font-size:12px;color:var(--navy);font-weight:800}
+
+.calendar{background:var(--dark);color:#fff}
+.calendar-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
+.calendar h2{font-size:42px;line-height:1.1;margin:10px 0 18px}
+.calendar p{color:rgba(255,255,255,.75);margin-bottom:18px}
+.date-box{border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:35px;text-align:center}
+.date-box small{font-size:12px;letter-spacing:2px;font-weight:700}
+.date-box strong{display:block;font-size:72px;line-height:1;margin:12px 0}
+.date-box span{font-size:13px;color:rgba(255,255,255,.65)}
+
+.start{background:#fff}
+.start-box{background:var(--light);border-radius:12px;padding:32px}
+.start-box h2{font-size:38px;line-height:1.1;margin-bottom:17px;color:var(--navy)}
+.start-box p{color:var(--muted);max-width:850px}
+.start-box strong{color:var(--navy)}
+
+.scenarios{background:var(--gray)}
+.scenario-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.scenario{background:#fff;padding:28px;border-radius:9px;border:1px solid var(--line)}
+.scenario h3{font-size:19px;margin-bottom:9px;color:var(--navy)}
+.scenario p{font-size:13px;color:var(--muted)}
+
+.offer{background:#fff}
+.offer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.offer-card{padding:29px 23px;border:1px solid var(--line);border-radius:9px}
+.offer-card h3{font-size:19px;margin:13px 0 8px}
+.offer-card p{font-size:13px;color:var(--muted)}
+
+.quote{text-align:center;padding:42px 20px}
+.quote h2{max-width:920px;margin:auto;font-size:clamp(30px,5vw,53px);line-height:1.12;letter-spacing:-2px}
+.quote span{color:var(--navy)}
+
+.contact{background:var(--gray)}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:start}
+.contact-info h2{font-size:40px;line-height:1.1;margin:11px 0 18px}
+.contact-info p{color:var(--muted);margin-bottom:27px}
+.highlight{background:#fff;border-left:4px solid var(--navy);padding:20px;border-radius:6px;font-weight:600}
+.form-box{background:#fff;padding:30px;border-radius:11px;box-shadow:0 15px 50px rgba(20,35,65,.07)}
+.form-box h3{font-size:23px;margin-bottom:23px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:11px;font-weight:800;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:5px;font-family:inherit;font-size:12px;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--navy)}
+.field textarea{height:95px;resize:vertical}
+.submit{width:100%;border:0;background:var(--navy);color:#fff;padding:16px;border-radius:6px;font-family:inherit;font-weight:800;font-size:13px;cursor:pointer}
+.submit:hover{background:var(--dark)}
+
+footer{background:var(--dark);padding:30px 0;color:#fff}
+.footer{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.footer-logo{width:180px;display:block;background:transparent}
+.footer p{color:rgba(255,255,255,.55);font-size:11px;margin-top:8px}
+.footer-right{text-align:right;color:rgba(255,255,255,.55);font-size:11px}
+.whatsapp{position:fixed;right:22px;bottom:22px;width:57px;height:57px;background:#25d366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:24px;box-shadow:0 8px 25px rgba(0,0,0,.2);z-index:100}
+
+@media(max-width:850px){
+.explain-grid,.calendar-grid,.contact-grid{grid-template-columns:1fr}
+.why-grid,.offer-grid{grid-template-columns:1fr 1fr}
+.scenario-grid{grid-template-columns:1fr}
+.footer-right{text-align:left}
+}
+@media(max-width:600px){
+section{padding:24px 0}
+.hero{min-height:570px}
+.hero h1{letter-spacing:-2px}
+.hero p{font-size:16px}
+.why-grid,.offer-grid,.form-row{grid-template-columns:1fr}
+.form-box{padding:25px}
+.header-btn{display:none}
+.logo{width:175px}
+.calendar h2,.contact-info h2{font-size:33px}
+.start-box{padding:28px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container header">
+<a href="https://www.monitorenegocios.com.br" aria-label="Ir para a página principal da Monitore"><img src="logo-monitore.png" class="logo" alt="Monitore Gestão de Negócios Empresariais"></a>
+<a href="#orcamento" class="header-btn">SOLICITAR ORÇAMENTO</a>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<div class="tag">SEMANA DA QUALIDADE 2026</div>
+<h1>Sua empresa não precisa esperar um problema acontecer para falar sobre <span>qualidade.</span></h1>
+<p>
+Você já ouviu falar da Semana da Qualidade? Se ainda não, não tem problema.
+Ela pode ser uma excelente oportunidade para reunir sua equipe e refletir sobre
+como melhorar a forma de trabalhar e os resultados que sua empresa entrega.
+</p>
+<a href="#entenda" class="btn">ENTENDA COMO FUNCIONA ↓</a>
+<div class="hero-info">
+<div><strong>2 horas</strong><span>palestra corporativa</span></div>
+<div><strong>+ Dinâmica</strong><span>experiência interativa</span></div>
+<div><strong>Presencial ou online</strong><span>para sua equipe</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="explain" id="entenda">
+<div class="container">
+<div class="section-title">
+<small>PRIMEIRO, VAMOS EXPLICAR</small>
+<h2>O que é a Semana da Qualidade?</h2>
+<p>Se você nunca ouviu falar, pense nela como um momento criado para tirar a qualidade da rotina automática e colocá-la no centro da conversa.</p>
+</div>
+
+<div class="explain-grid">
+<div class="explain-text">
+<h3>Uma oportunidade para sua empresa parar, reunir as pessoas e olhar para a forma como trabalha.</h3>
+<p>A Semana da Qualidade é uma oportunidade para conscientizar e envolver as equipes em torno de temas como qualidade, melhoria dos processos, eficiência, prevenção de problemas e resultados.</p>
+<p>Em diferentes países, empresas e organizações aproveitam novembro para realizar ações de qualidade. A programação pode ocupar uma semana inteira ou começar com uma ação simples: <strong>uma experiência que faça as pessoas enxergarem o trabalho de outra maneira.</strong></p>
+</div>
+
+<div class="points">
+<div class="point">Qualidade <span>Fazer melhor aquilo que entregamos.</span></div>
+<div class="point">Processos <span>Entender como o trabalho realmente acontece.</span></div>
+<div class="point">Pessoas <span>Envolver quem executa e influencia os resultados.</span></div>
+<div class="point">Melhoria <span>Questionar o que pode ser feito de uma maneira melhor.</span></div>
+<div class="point">Resultados <span>Reduzir desperdícios e aumentar o valor entregue.</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="why">
+<div class="container">
+<div class="section-title">
+<small>POR QUE FAZER?</small>
+<h2>Porque pequenos problemas podem virar grandes custos.</h2>
+<p>No dia a dia, algumas situações passam a ser consideradas normais.</p>
+</div>
+<div class="why-grid">
+<div class="card"><span class="num">01</span><h3>“Sempre fizemos assim.”</h3><p>Um processo antigo pode continuar existindo mesmo quando já não faz sentido.</p></div>
+<div class="card"><span class="num">02</span><h3>“Depois a gente corrige.”</h3><p>Corrigir depois quase sempre custa mais do que prevenir.</p></div>
+<div class="card"><span class="num">03</span><h3>“É só um retrabalho.”</h3><p>Pequenos retrabalhos repetidos consomem tempo, dinheiro e energia.</p></div>
+<div class="card"><span class="num">04</span><h3>“Esse erro acontece.”</h3><p>Quando um erro vira rotina, ele deixa de ser exceção e passa a ser oportunidade de melhoria.</p></div>
+</div>
+</div>
+</section>
+
+<section class="calendar" id="historia">
+<div class="container">
+
+<div class="section-title" style="color:#fff;max-width:900px">
+<small style="color:#fff">UMA CELEBRAÇÃO INTERNACIONAL</small>
+<h2 style="margin-top:12px">A qualidade ganhou uma data. Depois, uma semana. E novembro se tornou um mês de mobilização.</h2>
+<p style="color:rgba(255,255,255,.76)">
+A Semana da Qualidade não é uma campanha criada por uma empresa. Ela faz parte de uma mobilização internacional
+que busca colocar a qualidade, a melhoria e a excelência no centro das organizações.
+</p>
+</div>
+
+<div class="calendar-grid">
+
+<div>
+<div class="timeline-item" style="margin-bottom:13px">
+<h3 style="font-size:20px;margin-bottom:4px">Dia Mundial da Qualidade</h3>
+<p>
+Celebrado na <strong>segunda quinta-feira de novembro</strong>, o Dia Mundial da Qualidade ganhou projeção internacional como um momento de conscientização sobre qualidade, produtividade e melhoria. O histórico oficial do <strong>CQI</strong> registra a primeira celebração mundial em <strong>9 de novembro de 1989</strong>, pelo então IQA.
+</p>
+</div>
+
+<div class="timeline-item" style="margin-bottom:13px">
+<h3 style="font-size:20px;margin-bottom:4px">Mês da Qualidade · Japão</h3>
+<p>
+No Japão, a mobilização é ainda mais antiga: a <strong>JUSE</strong> registra o primeiro <strong>Quality Month em 1960</strong>. Novembro passou a concentrar ações de conscientização, treinamento e melhoria.
+</p>
+</div>
+
+<div class="timeline-item">
+<h3 style="font-size:20px;margin-bottom:4px">Semana Mundial da Qualidade</h3>
+<p>
+Em <strong>2021</strong>, o CQI ampliou a campanha para uma semana inteira. Assim, empresas passaram a ter mais espaço para realizar <strong>palestras, treinamentos, dinâmicas, debates e ações de engajamento</strong>.
+</p>
+</div>
+
+<div style="font-size:10.5px;line-height:1.45;color:rgba(255,255,255,.55);margin-top:10px">
+Há fontes secundárias que associam a instituição da data à ONU em 1990; o histórico oficial do CQI consultado registra a primeira celebração mundial em 1989.
+</div>
+</div>
+
+<div class="date-box">
+<small>DIA MUNDIAL DA QUALIDADE · 2026</small>
+<strong>12</strong>
+<span>NOVEMBRO · 2ª QUINTA-FEIRA</span>
+<br><br>
+<small style="opacity:.75">MÊS MUNDIAL DA QUALIDADE</small>
+<p style="margin-top:12px;color:rgba(255,255,255,.72);font-size:12px">
+Durante novembro, organizações em diferentes países realizam ações para promover a cultura da qualidade.
+</p>
+</div>
+
+</div>
+
+<div style="margin-top:14px;padding-top:10px;border-top:1px solid rgba(255,255,255,.14);font-size:11px;color:rgba(255,255,255,.55)">
+Fontes de referência: Chartered Quality Institute (CQI), JUSE — Union of Japanese Scientists and Engineers,
+e Instituto Português da Qualidade (IPQ).
+</div>
+
+</div>
+</section>
+
+<section style="background:#fff">
+<div class="container">
+<div class="section-title">
+<small>ENTENDA A DIFERENÇA</small>
+<h2>Dia, Semana e Mês da Qualidade não são a mesma coisa.</h2>
+<p>Os três conceitos se complementam e ajudam a empresa a transformar uma data em uma oportunidade de mobilização.</p>
+</div>
+
+<div style="overflow-x:auto">
+<table style="width:100%;border-collapse:collapse;min-width:720px;font-size:13px">
+<thead>
+<tr style="background:#233774;color:#fff;text-align:left">
+<th style="padding:16px">Ação</th>
+<th style="padding:16px">Quando</th>
+<th style="padding:16px">O que representa</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid #dfe5ef">
+<td style="padding:18px;font-weight:800;color:#233774">Dia Mundial da Qualidade</td>
+<td style="padding:18px">2ª quinta-feira de novembro</td>
+<td style="padding:18px">Uma data internacional para chamar atenção para a importância da qualidade.</td>
+</tr>
+<tr style="border-bottom:1px solid #dfe5ef;background:#f5f7fa">
+<td style="padding:18px;font-weight:800;color:#233774">Semana Mundial da Qualidade</td>
+<td style="padding:18px">Semana da campanha em novembro</td>
+<td style="padding:18px">Um período ampliado para palestras, treinamentos, dinâmicas, debates e ações corporativas.</td>
+</tr>
+<tr>
+<td style="padding:18px;font-weight:800;color:#233774">Mês da Qualidade</td>
+<td style="padding:18px">Novembro</td>
+<td style="padding:18px">Um período mais amplo para campanhas e iniciativas de conscientização e melhoria.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section class="start">
+<div class="container">
+<div class="start-box">
+<h2>E se a minha empresa nunca fez uma Semana da Qualidade?</h2>
+<p><strong>Comece simples.</strong> Você não precisa criar uma grande programação, contratar vários palestrantes ou parar a empresa durante uma semana inteira.</p>
+<p style="margin-top:12px">Uma boa conversa pode ser o começo. A palestra da Monitore foi criada justamente para empresas que querem transformar a Semana da Qualidade em uma experiência prática e envolvente.</p>
+</div>
+</div>
+</section>
+
+<section class="scenarios">
+<div class="container">
+<div class="section-title">
+<small>QUAL É O MOMENTO DA SUA EMPRESA?</small>
+<h2>Existe uma forma de começar para cada realidade.</h2>
+</div>
+<div class="scenario-grid">
+<div class="scenario"><h3>Nunca fizemos.</h3><p>Comece com uma experiência simples. Uma palestra de 2 horas pode ser o primeiro passo para criar uma cultura de qualidade.</p></div>
+<div class="scenario"><h3>Já fazemos todos os anos.</h3><p>Dê um novo significado à programação com uma dinâmica diferente e conectada à rotina.</p></div>
+<div class="scenario"><h3>Temos um sistema de gestão.</h3><p>Conecte qualidade à rotina das pessoas. Procedimento sozinho não cria cultura.</p></div>
+<div class="scenario"><h3>Estamos passando por mudanças.</h3><p>Use a Semana da Qualidade para mobilizar a equipe e reforçar comportamentos de melhoria.</p></div>
+</div>
+</div>
+</section>
+
+<section class="offer">
+<div class="container">
+<div class="section-title">
+<small>A EXPERIÊNCIA MONITORE</small>
+<h2>Duas horas para fazer sua equipe pensar diferente sobre qualidade.</h2>
+<p>Uma experiência corporativa de 2 horas que combina conteúdo, provocação, dinâmica e reflexão.</p>
+</div>
+<div class="offer-grid">
+<div class="offer-card"><span class="num">01</span><h3>Conteúdo</h3><p>Uma conversa objetiva sobre qualidade, processos, desperdícios e melhoria.</p></div>
+<div class="offer-card"><span class="num">02</span><h3>Provocação</h3><p>Perguntas para olhar para problemas que muitas vezes passaram a ser considerados normais.</p></div>
+<div class="offer-card"><span class="num">03</span><h3>Dinâmica</h3><p>Uma atividade prática para colocar os participantes em contato com os conceitos.</p></div>
+<div class="offer-card"><span class="num">04</span><h3>Reflexão</h3><p>Uma provocação final: o que podemos fazer diferente quando voltarmos à nossa rotina?</p></div>
+</div>
+</div>
+</section>
+
+<section class="quote">
+<h2>Você não precisa ter uma Semana da Qualidade para contratar a palestra.<br><span>A palestra pode ser justamente o ponto de partida para criar a sua.</span></h2>
+</section>
+
+<section class="contact" id="orcamento">
+<div class="container">
+<div class="contact-grid">
+<div class="contact-info">
+<small style="color:#233774;font-weight:800;letter-spacing:2px">LEVE A EXPERIÊNCIA PARA SUA EMPRESA</small>
+<h2>Vamos fazer a Semana da Qualidade da sua empresa acontecer?</h2>
+<p>Conte-nos sobre sua empresa, seu público e a data que está pensando. A Monitore prepara uma proposta adequada à sua realidade.</p>
+<div class="highlight"><strong>Palestra de 2 horas + dinâmica interativa.</strong><br><br>Presencial ou online · Para equipes de diferentes segmentos · Abordagem adaptável à realidade da empresa.</div>
+</div>
+
+<div class="form-box">
+<h3>Solicitar orçamento</h3>
+<form id="orcamentoForm">
+<div class="form-row">
+<div class="field"><label>Nome *</label><input type="text" id="nome" required placeholder="Seu nome"></div>
+<div class="field"><label>Empresa *</label><input type="text" id="empresa" required placeholder="Nome da empresa"></div>
+</div>
+<div class="form-row">
+<div class="field"><label>E-mail *</label><input type="email" id="email" required placeholder="seu@email.com"></div>
+<div class="field"><label>WhatsApp *</label><input type="tel" id="telefone" required placeholder="(99) 99999-9999"></div>
+</div>
+<div class="form-row">
+<div class="field"><label>Cidade / Estado</label><input type="text" id="cidade" placeholder="Ex.: São Luís - MA"></div>
+<div class="field"><label>Formato</label><select id="formato"><option value="">Selecione</option><option>Presencial</option><option>Online</option><option>Ainda não sei</option></select></div>
+</div>
+<div class="form-row">
+<div class="field"><label>Participantes</label><select id="participantes"><option value="">Selecione</option><option>Até 20</option><option>21 a 50</option><option>51 a 100</option><option>101 a 300</option><option>Mais de 300</option></select></div>
+<div class="field"><label>Data prevista</label><input type="date" id="data"></div>
+</div>
+<div class="field"><label>Conte um pouco sobre o evento</label><textarea id="mensagem" placeholder="Ex.: nunca fizemos uma Semana da Qualidade, já temos programação, quantidade de pessoas, local..."></textarea></div>
+<button type="submit" class="submit">SOLICITAR ORÇAMENTO</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container footer">
+<div>
+<div class="footer-logo"><img src="logo-monitore.png" style="width:100%;display:block" alt="Monitore"></div>
+<p>Transformamos desafios em resultados.</p>
+</div>
+<div class="footer-right">Gestão · Excelência Operacional · Inteligência de Negócios · Desenvolvimento de Pessoas<br><br>© 2026 Monitore Negócios Empresariais</div>
+</div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5598985130101?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20a%20Semana%20da%20Qualidade%202026." target="_blank" aria-label="WhatsApp">☎</a>
+
+<script>
+document.getElementById("orcamentoForm").addEventListener("submit",function(e){
+e.preventDefault();
+const campos=["nome","empresa","email","telefone","cidade","formato","participantes","data","mensagem"];
+const valores={};
+campos.forEach(id=>valores[id]=document.getElementById(id).value);
+const texto="Olá! Gostaria de solicitar um orçamento para a Semana da Qualidade 2026.%0A%0A"+
+"*Nome:* "+encodeURIComponent(valores.nome)+"%0A"+
+"*Empresa:* "+encodeURIComponent(valores.empresa)+"%0A"+
+"*E-mail:* "+encodeURIComponent(valores.email)+"%0A"+
+"*WhatsApp:* "+encodeURIComponent(valores.telefone)+"%0A"+
+"*Cidade:* "+encodeURIComponent(valores.cidade)+"%0A"+
+"*Formato:* "+encodeURIComponent(valores.formato)+"%0A"+
+"*Participantes:* "+encodeURIComponent(valores.participantes)+"%0A"+
+"*Data prevista:* "+encodeURIComponent(valores.data)+"%0A"+
+"*Informações:* "+encodeURIComponent(valores.mensagem);
+window.open("https://wa.me/5598985130101?text="+texto,"_blank");
+});
+</script>
+</body>
+</html>
